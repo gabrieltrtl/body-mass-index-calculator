@@ -60,6 +60,8 @@ body {
     left: 0;
     top: 0;
     background: linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0 0 35px 35px;
+    z-index: -1;
   }
 }
 
@@ -75,11 +77,108 @@ body {
 }
 
 .hero__form-wrapper {
-  max-width: 327px;
+  max-width: 328px;
+  background-color: $neutral-1;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 24px;
+}
+.hero__form {
+  .radio__label {
+    color: $primary-2;
+    font-weight: 600;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+  }
+  .measurement__label {
+    font-size: map-get($fonts, "$small1");
+    margin-bottom: 8px;
+    line-height: 1.5;
+    display: inline-block;
+    color: $primary-3;
+  }
+  input[type="radio"] {
+    appearance: none;
+    margin-right: 18px;
+    border: 1px solid $primary-3;
+    width: 31px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    &:checked {
+      background-color: #315CF626;
+      border: 0px solid #315CF626;
+      &::after {
+        content: "";
+        background-color: #345FF6;
+        aspect-ratio: 1;
+        width: 15px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+    }
+  } 
+  input[type="text"] {
+    display: block;
+    border-radius: 12px;
+    border: 1px solid $primary-3;
+    padding: 20px 24px;
+    &::placeholder {
+      font-size: map-get($fonts, "$medium1");
+      color: $primary-3;
+      font-weight: 600;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .form__title {
-  font-size: map-get($fonts, "$medium2" );
+  font-size: map-get($fonts, "$medium2");
   color: $primary-2;
   text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
+
+.form__radios {
+  display: flex; 
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.text-inputs__height {
+  display: inline-block;
+  position: relative;
+  .placeholder-text {
+    color: #345FF6;
+    font-size: map-get($fonts, "$medium2");
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+.text-inputs__weight {
+  display: inline-block;
+  position: relative;
+  .placeholder-text {
+    color: #345FF6;
+    font-size: map-get($fonts, "$medium2");
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+

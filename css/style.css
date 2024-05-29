@@ -54,6 +54,8 @@ body {
   left: 0;
   top: 0;
   background: linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+  border-radius: 0 0 35px 35px;
+  z-index: -1;
 }
 
 .intro__title {
@@ -68,11 +70,105 @@ body {
 }
 
 .hero__form-wrapper {
-  max-width: 327px;
+  max-width: 328px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.hero__form .radio__label {
+  color: #253347;
+  font-weight: 600;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+.hero__form .measurement__label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  display: inline-block;
+  color: #5E6E85;
+}
+.hero__form input[type=radio] {
+  appearance: none;
+  margin-right: 18px;
+  border: 1px solid #5E6E85;
+  width: 31px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+}
+.hero__form input[type=radio]:checked {
+  background-color: rgba(49, 92, 246, 0.1490196078);
+  border: 0px solid rgba(49, 92, 246, 0.1490196078);
+}
+.hero__form input[type=radio]:checked::after {
+  content: "";
+  background-color: #345FF6;
+  aspect-ratio: 1;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.hero__form input[type=text] {
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #5E6E85;
+  padding: 20px 24px;
+}
+.hero__form input[type=text]::placeholder {
+  font-size: 20px;
+  color: #5E6E85;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .form__title {
   font-size: 24px;
   color: #253347;
   text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.form__radios {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.text-inputs__height {
+  display: inline-block;
+  position: relative;
+}
+.text-inputs__height .placeholder-text {
+  color: #345FF6;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+}
+
+.text-inputs__weight {
+  display: inline-block;
+  position: relative;
+}
+.text-inputs__weight .placeholder-text {
+  color: #345FF6;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */
