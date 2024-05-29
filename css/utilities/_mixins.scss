@@ -1,0 +1,14 @@
+  // Media Query
+  @mixin device($device) {
+    @if $device == tablet {
+      @media (min-width: 43.75rem) {
+        @content;
+      }
+    }  
+    @else if $device == desktop {
+      @media (min-width: 75rem) {
+        @content;
+      }
+    }
+  }
+  
