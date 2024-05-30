@@ -82,8 +82,10 @@ body {
   margin: 0 auto;
   border-radius: 16px;
   padding: 24px;
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25); 
 }
 .hero__form {
+  margin-bottom: 24px;
   .radio__label {
     color: $primary-2;
     font-weight: 600;
@@ -180,5 +182,37 @@ body {
     transform: translateY(-50%);
   }
 }
+
+.imperial .measurement__label {
+  display: block;
+}
+
+.imperial input[type=text] {
+  max-width: 132px;
+}
+
+.text-inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// .form__text-inputs.metric {
+//   display: none;
+// }
+
+// .form__text-inputs.imperial {
+//   display: none;
+// }
+
+#metric:checked ~ .form__text-inputs.metric {
+  display: block;
+}
+
+#imperial:checked ~ .form__text-inputs.imperial {
+  display: block;
+}
+
+
 
 
