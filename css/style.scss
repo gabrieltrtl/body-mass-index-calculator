@@ -79,7 +79,7 @@ body {
 .hero__form-wrapper {
   max-width: 328px;
   background-color: $neutral-1;
-  margin: 0 auto;
+  margin: 0 auto 72px auto;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25); 
@@ -196,22 +196,105 @@ body {
   justify-content: space-between;
 }
 
-
-// .form__text-inputs.metric {
-//   display: none;
-// }
-
-// .form__text-inputs.imperial {
-//   display: none;
-// }
-
-#metric:checked ~ .form__text-inputs.metric {
-  display: block;
+.form__result {
+  background-color: $primary-1;
+  color: $neutral-1;
+  padding: 32px;
+  border-radius: 16px;
 }
 
-#imperial:checked ~ .form__text-inputs.imperial {
-  display: block;
+.hero__meaning {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 71.61px;
 }
+
+.meaning__img {
+  margin-bottom: 48px;
+}
+
+.meaning__content {
+  max-width: 328px;
+}
+
+.meaning__title {
+  margin-bottom: 32px;
+  color: $primary-2;
+  font-size: map-get($fonts, "$medium3");
+}
+
+.meaning__text {
+  line-height: 1.5;
+  color: $primary-3;
+}
+
+.hero__advices {
+  background: linear-gradient(300deg,rgba(214, 230, 254, .5), rgba(214, 252, 254, 0) 100%);
+  // background: linear-gradient(315deg,#d7e7fe40 0%,#d6fcfe00 100%);
+  padding: 56px 29px 56px 19px;
+  margin-bottom: 72px;
+}
+
+.advices__icon {
+  margin-bottom: 32px;
+}
+
+.advices__title {
+  color: $primary-2;
+  font-size: map-get($fonts, "$medium2");
+  margin-bottom: 24px;
+}
+
+.advices__text:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.hero__limitations {
+  margin: 0 29px 96px 19px;
+}
+
+.limitations__title {
+  margin-bottom: 32px;
+}
+
+.hero__limitations > p {
+  margin-bottom: 56px;
+}
+
+.limitations__card {
+  box-shadow: 16px 32px 56px rgba($color: #8FAECF, $alpha: .25);
+  padding: 24px;
+  border-radius: 16px;
+  background-color: $neutral-1;
+}
+
+.limitations__card:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px
+}
+
+
+.limitations__subtitle {
+ color: $primary-2;
+ font-size: map-get($fonts, "$medium1");
+
+}
+
+.limitations__text {
+  line-height: 1.5;
+  color: $primary-3;
+}
+
+
+
 
 
 

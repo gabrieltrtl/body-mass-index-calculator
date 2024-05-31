@@ -72,7 +72,7 @@ body {
 .hero__form-wrapper {
   max-width: 328px;
   background-color: #FFFFFF;
-  margin: 0 auto;
+  margin: 0 auto 72px auto;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
@@ -190,10 +190,96 @@ body {
   justify-content: space-between;
 }
 
-#metric:checked ~ .form__text-inputs.metric {
-  display: block;
+.form__result {
+  background-color: #345FF6;
+  color: #FFFFFF;
+  padding: 32px;
+  border-radius: 16px;
 }
 
-#imperial:checked ~ .form__text-inputs.imperial {
-  display: block;
+.hero__meaning {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 71.61px;
+}
+
+.meaning__img {
+  margin-bottom: 48px;
+}
+
+.meaning__content {
+  max-width: 328px;
+}
+
+.meaning__title {
+  margin-bottom: 32px;
+  color: #253347;
+  font-size: 32px;
+}
+
+.meaning__text {
+  line-height: 1.5;
+  color: #5E6E85;
+}
+
+.hero__advices {
+  background: linear-gradient(300deg, rgba(214, 230, 254, 0.5), rgba(214, 252, 254, 0) 100%);
+  padding: 56px 29px 56px 19px;
+  margin-bottom: 72px;
+}
+
+.advices__icon {
+  margin-bottom: 32px;
+}
+
+.advices__title {
+  color: #253347;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.advices__text:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.hero__limitations {
+  margin: 0 29px 96px 19px;
+}
+
+.limitations__title {
+  margin-bottom: 32px;
+}
+
+.hero__limitations > p {
+  margin-bottom: 56px;
+}
+
+.limitations__card {
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.limitations__card:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.limitations__subtitle {
+  color: #253347;
+  font-size: 20px;
+}
+
+.limitations__text {
+  line-height: 1.5;
+  color: #5E6E85;
 }/*# sourceMappingURL=style.css.map */
