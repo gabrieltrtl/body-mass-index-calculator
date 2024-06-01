@@ -29,13 +29,12 @@
 
       <form class="hero__form" action="">
         <fieldset>
-
-          <legend class="form__title">Enter your details below</legend>
+          <h2 class="form__title">Enter your details below</h2>
           <div class="form__radios">
-            <label class="radio__label" for="metric"><input name="measurement" value="metric" id="metric" type="radio">Metric</label>
+            <label class="radio__label" for="metric"><input name="measurement" value="metric" id="metric" type="radio" checked>Metric</label>
             <label class="radio__label" for="imperial"><input name="measurement" value="imperial" id="imperial" type="radio">Imperial</label>
           </div>
-          <div class="form__text-inputs metric">
+          <div class="form__text-inputs metric active">
             <label class="measurement__label" for="height-cm">Height</label>
             <div class="text-inputs__height">
               <input id="height-cm" type="text" placeholder="0" required>
@@ -49,7 +48,8 @@
           </div>
           <div class="form__text-inputs imperial">
             <label class="measurement__label" for="height-ft">Height</label>
-            <div class="text-inputs-wrapper">
+            <fieldset class="text-inputs-wrapper">
+              <legend>Height</legend>
               <div class="text-inputs__height ft">
                 <input id="height-ft" type="text" placeholder="0" required>
                 <span class="placeholder-text ft">ft</span>
@@ -58,9 +58,10 @@
                 <input id="height-in" type="text" placeholder="0" required>
                 <span class="placeholder-text in">in</span>
               </div>
-            </div>
+            </fieldset>
             <label class="measurement__label" for="weight">Weight</label>
-            <div class="text-inputs-wrapper">
+            <fieldset class="text-inputs-wrapper">
+              <legend>Weight</legend>
               <div class="text-inputs__weight st">
                 <input id="weight-st" type="text" placeholder="0" required>
                 <span class="placeholder-text st">st</span>
@@ -69,7 +70,7 @@
                 <input id="weight-lbs" type="text" placeholder="0" required>
                 <span class="placeholder-text lbs">lbs</span>
               </div>
-            </div>
+            </fieldset>
           </div>
         </fieldset>
       </form>

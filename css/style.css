@@ -77,6 +77,11 @@ body {
   padding: 24px;
   box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
 }
+@media (min-width: 43.75rem) {
+  .hero__form-wrapper {
+    max-width: 686px;
+  }
+}
 
 .hero__form {
   margin-bottom: 24px;
@@ -138,15 +143,30 @@ body {
 .form__title {
   font-size: 24px;
   color: #253347;
-  text-align: center;
   font-weight: 600;
   margin-bottom: 24px;
+  letter-spacing: -1.2px;
 }
 
 .form__radios {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 24px;
+}
+.form__radios label[for=metric] {
+  margin-right: 53px;
+}
+@media (min-width: 43.75rem) {
+  .form__radios label[for=metric] {
+    margin-right: 224px;
+  }
+}
+
+.form__text-inputs.imperial {
+  display: block;
+}
+
+.active {
+  display: block;
 }
 
 .text-inputs__height {
@@ -195,6 +215,15 @@ body {
   color: #FFFFFF;
   padding: 32px;
   border-radius: 16px;
+}
+@media (min-width: 43.75rem) {
+  .form__result {
+    border-radius: 16px 999px 999px 16px;
+  }
+}
+
+.result__number {
+  font-size: 48px;
 }
 
 .hero__meaning {
