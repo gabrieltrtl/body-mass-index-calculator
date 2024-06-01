@@ -34,10 +34,23 @@ button, fieldset {
   border: none;
 }
 
+
 // Project Start
 body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
+}
+
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
 }
 
 .header {
@@ -164,7 +177,7 @@ body {
 }
 
 .form__text-inputs.imperial {
-  display: block;
+  display: none;
 }
 
 .active {
@@ -201,6 +214,14 @@ body {
 
 .imperial .measurement__label {
   display: block;
+}
+
+.imperial__legend {
+  font-size: map-get($fonts, "$small1");
+    margin-bottom: 8px;
+    line-height: 1.5;
+    display: inline-block;
+    color: $primary-3;
 }
 
 .imperial input[type=text] {

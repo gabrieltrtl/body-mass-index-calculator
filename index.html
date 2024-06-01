@@ -47,30 +47,30 @@
             </div>
           </div>
           <div class="form__text-inputs imperial">
-            <label class="measurement__label" for="height-ft">Height</label>
+            <!-- <label class="measurement__label sr-only" for="height-ft">Height</label> -->
             <fieldset class="text-inputs-wrapper">
-              <legend>Height</legend>
+              <legend class="imperial__legend">Height</legend>
               <div class="text-inputs__height ft">
-                <input id="height-ft" type="text" placeholder="0" required>
+                <input aria-label="height" id="height-ft" type="text" placeholder="0" required>
                 <span class="placeholder-text ft">ft</span>
               </div>
               <div class="text-inputs__height in">
-                <input id="height-in" type="text" placeholder="0" required>
+                <input aria-label="height" id="height-in" type="text" placeholder="0" required>
                 <span class="placeholder-text in">in</span>
               </div>
             </fieldset>
-            <label class="measurement__label" for="weight">Weight</label>
+            <!-- <label class="measurement__label sr-only" for="weight">Weight</label> -->
             <fieldset class="text-inputs-wrapper">
-              <legend>Weight</legend>
+              <legend class="imperial__legend">Weight</legend>
               <div class="text-inputs__weight st">
-                <input id="weight-st" type="text" placeholder="0" required>
+                <input aria-label="weight" id="weight-st" type="text" placeholder="0" required>
                 <span class="placeholder-text st">st</span>
               </div>
               <div class="text-inputs__weight lbs">
-                <input id="weight-lbs" type="text" placeholder="0" required>
+                <input aria-label="weight" id="weight-lbs" type="text" placeholder="0" required>
                 <span class="placeholder-text lbs">lbs</span>
               </div>
-            </fieldset>
+            </fieldset class>
           </div>
         </fieldset>
       </form>
