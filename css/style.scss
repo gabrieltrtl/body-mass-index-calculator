@@ -98,6 +98,7 @@ border-width: 0;
   box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25); 
   @include device(tablet) {
     max-width: 686px;
+    padding: 32px;
   }
 }
 .hero__form {
@@ -146,6 +147,9 @@ border-width: 0;
     border-radius: 12px;
     border: 1px solid $primary-3;
     padding: 20px 24px;
+    @include device(tablet) {
+      width: 299px;
+    }
     &::placeholder {
       font-size: map-get($fonts, "$medium1");
       color: $primary-3;
@@ -177,7 +181,7 @@ border-width: 0;
 }
 
 .form__text-inputs.imperial {
-  display: none;
+  display: block;
 }
 
 .active {
@@ -187,12 +191,15 @@ border-width: 0;
 .text-inputs__height {
   display: inline-block;
   position: relative;
+  @include device(tablet) {
+    margin-right: 19px;
+  }
   .placeholder-text {
     color: #345FF6;
     font-size: map-get($fonts, "$medium2");
     font-weight: 600;
     position: absolute;
-    top: 50%;
+    top: calc(50% + 10px);
     right: 24px;
     transform: translateY(-50%);
   }
@@ -206,7 +213,7 @@ border-width: 0;
     font-size: map-get($fonts, "$medium2");
     font-weight: 600;
     position: absolute;
-    top: 50%;
+    top: calc(50% + 12px);
     right: 24px;
     transform: translateY(-50%);
   }
@@ -226,11 +233,17 @@ border-width: 0;
 
 .imperial input[type=text] {
   max-width: 132px;
+  @include device(tablet) {
+    max-width: initial;
+  }
 }
 
 .text-inputs-wrapper {
   display: flex;
   justify-content: space-between;
+  @include device(tablet) {
+    justify-content: initial;
+  }
 }
 
 .form__result {
@@ -240,11 +253,18 @@ border-width: 0;
   border-radius: 16px;
   @include device(tablet) {
     border-radius: 16px 999px 999px 16px;
+    display: flex;
+    align-items: center;
+    gap: 192px
   }
 }
 
 .result__number {
   font-size: map-get($fonts, "$large1");
+}
+
+.result__text {
+  font-size: map-get($fonts, "$small1");
 }
 
 .hero__meaning {
@@ -253,10 +273,20 @@ border-width: 0;
   flex-direction: column;
   text-align: left;
   margin-bottom: 71.61px;
+  @include device(tablet) {
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
 }
 
 .meaning__img {
   margin-bottom: 48px;
+  @include device(tablet) {
+    max-width: 435px;
+    margin-left: -116px;
+    margin-right: 75px;
+    margin-bottom: initial;
+  }
 }
 
 .meaning__content {
@@ -279,10 +309,30 @@ border-width: 0;
   // background: linear-gradient(315deg,#d7e7fe40 0%,#d6fcfe00 100%);
   padding: 56px 29px 56px 19px;
   margin-bottom: 72px;
+  @include device(tablet) {
+    padding: 60px 43px 60px 39px;
+  }
+}
+
+.advices__container {
+  @include device(tablet) {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.advices__container:not(:last-child) {
+  @include device(tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .advices__icon {
   margin-bottom: 32px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
 }
 
 .advices__title {
@@ -294,6 +344,7 @@ border-width: 0;
 .advices__text:not(:last-child) {
   margin-bottom: 40px;
 }
+
 
 .hero__limitations {
   margin: 0 29px 96px 19px;

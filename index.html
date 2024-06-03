@@ -35,13 +35,13 @@
             <label class="radio__label" for="imperial"><input name="measurement" value="imperial" id="imperial" type="radio">Imperial</label>
           </div>
           <div class="form__text-inputs metric active">
-            <label class="measurement__label" for="height-cm">Height</label>
             <div class="text-inputs__height">
+              <label class="measurement__label" for="height-cm">Height</label>
               <input id="height-cm" type="text" placeholder="0" required>
               <span class="placeholder-text cm">cm</span>
             </div>
-            <label class="measurement__label" for="weight-kg">Weight</label>
             <div class="text-inputs__weight">
+              <label class="measurement__label" for="weight-kg">Weight</label>
               <input id="weight-kg" type="text" placeholder="0" required>
               <span class="placeholder-text kg">kg</span>
             </div>
@@ -76,11 +76,12 @@
       </form>
       <!-- add score -->
       <div class="form__result">
-        <h3 class="result__title">Your BMI is...</h3>
+        <div class="result__title-wrapper">
+          <h3 class="result__title">Your BMI is...</h3>
+          <span class="result__number">35.5</span>
+        </div>
           <p class="result__text">
-            <span class="result__number">35</span>
-            Your BMI suggests you're
-            Your ideal weight is between
+            Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.
           </p>
       </div>
     </section>
@@ -99,24 +100,36 @@
       </div>
     </section>
     <section class="hero__advices">
-      <img class="advices__icon" src="./assets/images/icon-eating.svg" alt="">
-      <h3 class="advices__title">Healthy eating</h3>
-      <p class="advices__text">
-        Healthy eating promotes weight control, disease prevention, better digestion,
-        immunity, mental clarity, and mood.
+      <div class="advices__container">
+        <img class="advices__icon" src="./assets/images/icon-eating.svg" alt="">
+        <div class="advices__content">
+          <h3 class="advices__title">Healthy eating</h3>
+          <p class="advices__text">
+            Healthy eating promotes weight control, disease prevention, better digestion,
+            immunity, mental clarity, and mood.
+        </div>
+      </div>
       </p>
-      <img class="advices__icon" src="./assets/images/icon-exercise.svg" alt="">
-      <h3 class="advices__title">Regular exercise</h3>
-      <p class="advices__text">
-        Exercise improves fitness, aids weight control, elevates mood, and reduces disease
-        risk, fostering wellness and longevity.
-      </p>
-      <img class="advices__icon" src="assets/images/icon-sleep.svg" alt="">
-      <h3 class="advices__title">Adequate sleep</h3>
-      <p class="advices__text">
-        Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
-        overall restoration and rejuvenation.
-      </p>
+      <div class="advices__container">
+        <img class="advices__icon" src="./assets/images/icon-exercise.svg" alt="">
+        <div class="advices__content ">
+          <h3 class="advices__title">Regular exercise</h3>
+          <p class="advices__text">
+            Exercise improves fitness, aids weight control, elevates mood, and reduces disease
+            risk, fostering wellness and longevity.
+          </p>
+        </div>
+      </div>
+      <div class="advices__container">
+        <img class="advices__icon" src="assets/images/icon-sleep.svg" alt="">
+        <div class="advices__content">
+          <h3 class="advices__title">Adequate sleep</h3>
+          <p class="advices__text">
+            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
+            overall restoration and rejuvenation.
+          </p>
+        </div>
+      </div>
     </section>
     <section class="hero__limitations">
       <h2 class="limitations__title">Limitations of BMI</h2>

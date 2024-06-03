@@ -92,6 +92,7 @@ body {
 @media (min-width: 43.75rem) {
   .hero__form-wrapper {
     max-width: 686px;
+    padding: 32px;
   }
 }
 
@@ -143,6 +144,11 @@ body {
   border: 1px solid #5E6E85;
   padding: 20px 24px;
 }
+@media (min-width: 43.75rem) {
+  .hero__form input[type=text] {
+    width: 299px;
+  }
+}
 .hero__form input[type=text]::placeholder {
   font-size: 20px;
   color: #5E6E85;
@@ -174,7 +180,7 @@ body {
 }
 
 .form__text-inputs.imperial {
-  display: none;
+  display: block;
 }
 
 .active {
@@ -185,12 +191,17 @@ body {
   display: inline-block;
   position: relative;
 }
+@media (min-width: 43.75rem) {
+  .text-inputs__height {
+    margin-right: 19px;
+  }
+}
 .text-inputs__height .placeholder-text {
   color: #345FF6;
   font-size: 24px;
   font-weight: 600;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 10px);
   right: 24px;
   transform: translateY(-50%);
 }
@@ -204,7 +215,7 @@ body {
   font-size: 24px;
   font-weight: 600;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 12px);
   right: 24px;
   transform: translateY(-50%);
 }
@@ -224,10 +235,20 @@ body {
 .imperial input[type=text] {
   max-width: 132px;
 }
+@media (min-width: 43.75rem) {
+  .imperial input[type=text] {
+    max-width: initial;
+  }
+}
 
 .text-inputs-wrapper {
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 43.75rem) {
+  .text-inputs-wrapper {
+    justify-content: initial;
+  }
 }
 
 .form__result {
@@ -239,11 +260,18 @@ body {
 @media (min-width: 43.75rem) {
   .form__result {
     border-radius: 16px 999px 999px 16px;
+    display: flex;
+    align-items: center;
+    gap: 192px;
   }
 }
 
 .result__number {
   font-size: 48px;
+}
+
+.result__text {
+  font-size: 14px;
 }
 
 .hero__meaning {
@@ -253,9 +281,23 @@ body {
   text-align: left;
   margin-bottom: 71.61px;
 }
+@media (min-width: 43.75rem) {
+  .hero__meaning {
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
+}
 
 .meaning__img {
   margin-bottom: 48px;
+}
+@media (min-width: 43.75rem) {
+  .meaning__img {
+    max-width: 435px;
+    margin-left: -116px;
+    margin-right: 75px;
+    margin-bottom: initial;
+  }
 }
 
 .meaning__content {
@@ -278,9 +320,33 @@ body {
   padding: 56px 29px 56px 19px;
   margin-bottom: 72px;
 }
+@media (min-width: 43.75rem) {
+  .hero__advices {
+    padding: 60px 43px 60px 39px;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .advices__container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .advices__container:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
 
 .advices__icon {
   margin-bottom: 32px;
+}
+@media (min-width: 43.75rem) {
+  .advices__icon {
+    margin-bottom: initial;
+  }
 }
 
 .advices__title {
