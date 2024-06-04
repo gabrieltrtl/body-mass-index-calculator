@@ -360,7 +360,7 @@ body {
   .hero__advices {
     display: flex;
     border-radius: 35px;
-    margin: 0 24px;
+    margin: 0 24px 120px 24px;
     padding: 72px 116px 96px 116px;
   }
 }
@@ -425,7 +425,7 @@ body {
   .hero__limitations {
     grid-template-columns: repeat(12, 1fr);
     max-width: 1160px;
-    margin: 0 auto;
+    margin: 0 auto 96px auto;
     gap: 32px 0;
   }
 }
@@ -444,6 +444,7 @@ body {
   .limitations__content {
     text-align: left;
     grid-column: 1/7;
+    max-width: 564px;
   }
 }
 
