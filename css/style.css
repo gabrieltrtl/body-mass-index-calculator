@@ -359,6 +359,9 @@ body {
 @media (min-width: 75rem) {
   .hero__advices {
     display: flex;
+    border-radius: 35px;
+    margin: 0 24px;
+    padding: 72px 116px 96px 116px;
   }
 }
 
@@ -379,6 +382,12 @@ body {
 @media (min-width: 43.75rem) {
   .advices__container:not(:last-child) {
     margin-bottom: 40px;
+  }
+}
+@media (min-width: 75rem) {
+  .advices__container:not(:last-child) {
+    margin-bottom: initial;
+    margin-right: 32px;
   }
 }
 
@@ -406,7 +415,35 @@ body {
 }
 @media (min-width: 43.75rem) {
   .hero__limitations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 43px 96px 39px;
+    gap: 24px 15px;
+  }
+}
+@media (min-width: 75rem) {
+  .hero__limitations {
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1160px;
+    margin: 0 auto;
+    gap: 32px 0;
+  }
+}
+
+.limitations__content {
+  text-align: center;
+  margin-bottom: 56px;
+}
+@media (min-width: 43.75rem) {
+  .limitations__content {
+    grid-column: 1/-1;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 75rem) {
+  .limitations__content {
+    text-align: left;
+    grid-column: 1/7;
   }
 }
 
@@ -416,6 +453,12 @@ body {
 @media (min-width: 43.75rem) {
   .limitations__title {
     text-align: center;
+  }
+}
+@media (min-width: 75rem) {
+  .limitations__title {
+    font-size: 48px;
+    text-align: initial;
   }
 }
 
@@ -428,18 +471,48 @@ body {
   }
 }
 
-@media (min-width: 43.75rem) {
-  .limitations__cards-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 15px;
+@media (min-width: 75rem) {
+  .limitations__card {
+    max-width: 365px;
   }
 }
 
-.limitations__card.race {
-  grid-column: 1/-1;
-  justify-self: center;
-  max-width: 365px;
+@media (min-width: 75rem) {
+  .limitations__card.gender {
+    grid-column: 8/13;
+  }
+}
+
+@media (min-width: 75rem) {
+  .limitations__card.age {
+    grid-column: 5/9;
+    align-self: start;
+  }
+}
+
+@media (min-width: 75rem) {
+  .limitations__card.muscle {
+    grid-column: 9/13;
+  }
+}
+
+@media (min-width: 75rem) {
+  .limitations__card.pregnancy {
+    grid-column: 4/7;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .limitations__card.race {
+    grid-column: 1/-1;
+    max-width: 365px;
+    justify-self: center;
+  }
+}
+@media (min-width: 75rem) {
+  .limitations__card.race {
+    grid-column: 7/11;
+  }
 }
 
 .limitations__card {

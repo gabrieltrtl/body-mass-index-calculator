@@ -336,6 +336,9 @@ border-width: 0;
   }
   @include device(desktop) {
     display: flex;
+    border-radius: 35px;
+    margin: 0 24px;
+    padding: 72px 116px 96px 116px;
   }
 }
 
@@ -354,6 +357,10 @@ border-width: 0;
 .advices__container:not(:last-child) {
   @include device(tablet) {
     margin-bottom: 40px;
+  }
+  @include device(desktop) {
+    margin-bottom: initial;
+    margin-right: 32px;
   }
 }
 
@@ -377,7 +384,29 @@ border-width: 0;
 .hero__limitations {
   margin: 0 29px 96px 19px;
   @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 43px 96px 39px;
+    gap: 24px 15px;
+  }
+  @include device(desktop) {
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1160px;
+    margin: 0 auto;
+    gap: 32px 0;
+  }
+}
+
+.limitations__content {
+  text-align: center;
+  margin-bottom: 56px;
+  @include device(tablet) {
+    grid-column: 1 / -1;
+    margin-bottom: 32px;
+  }
+  @include device(desktop) {
+    text-align: left;
+    grid-column: 1 / 7;
   }
 }
 
@@ -385,6 +414,10 @@ border-width: 0;
   margin-bottom: 32px;
   @include device(tablet) {
     text-align: center;
+  }
+  @include device(desktop) {
+    font-size: map-get($fonts, "$large1");
+    text-align: initial;
   }
 }
 
@@ -395,18 +428,46 @@ border-width: 0;
   }
 }
 
-.limitations__cards-wrapper {
-  @include device(tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 15px;
+.limitations__card {
+  @include device(desktop) {
+    max-width: 365px;
+  }
+}
+
+.limitations__card.gender {
+  @include device(desktop) {
+    grid-column: 8 / 13;
+  }
+}
+
+.limitations__card.age {
+  @include device(desktop) {
+    grid-column: 5 / 9;
+    align-self: start;
+  }
+}
+
+.limitations__card.muscle {
+  @include device(desktop) {
+    grid-column: 9 / 13;
+  }
+}
+
+.limitations__card.pregnancy {
+  @include device(desktop) {
+    grid-column: 4 / 7;
   }
 }
 
 .limitations__card.race {
-  grid-column: 1 / -1;
-  justify-self: center;
-  max-width: 365px;
+  @include device(tablet) {
+    grid-column: 1 / -1;
+    max-width: 365px;
+    justify-self: center;
+  }
+  @include device(desktop) {
+    grid-column: 7 / 11;
+  }
 }
 
 .limitations__card {
