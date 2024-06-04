@@ -472,12 +472,6 @@ body {
 }
 
 @media (min-width: 75rem) {
-  .limitations__card {
-    max-width: 365px;
-  }
-}
-
-@media (min-width: 75rem) {
   .limitations__card.gender {
     grid-column: 8/13;
   }
@@ -498,7 +492,7 @@ body {
 
 @media (min-width: 75rem) {
   .limitations__card.pregnancy {
-    grid-column: 4/7;
+    grid-column: 3/7;
   }
 }
 
@@ -520,6 +514,12 @@ body {
   padding: 24px;
   border-radius: 16px;
   background-color: #FFFFFF;
+}
+@media (min-width: 75rem) {
+  .limitations__card {
+    padding: 32px;
+    max-width: 365px;
+  }
 }
 
 .limitations__card:not(:last-of-type) {
