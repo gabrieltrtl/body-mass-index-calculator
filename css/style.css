@@ -287,6 +287,12 @@ body {
     margin-bottom: 96px;
   }
 }
+@media (min-width: 75rem) {
+  .hero__meaning {
+    justify-content: center;
+    align-items: initial;
+  }
+}
 
 .meaning__img {
   margin-bottom: 48px;
@@ -299,15 +305,39 @@ body {
     margin-bottom: initial;
   }
 }
+@media (min-width: 75rem) {
+  .meaning__img {
+    margin-left: initial;
+    max-width: 564px;
+    margin-right: 131px;
+  }
+}
 
 .meaning__content {
   max-width: 328px;
+}
+@media (min-width: 75rem) {
+  .meaning__content {
+    max-width: 465px;
+  }
+}
+@media (min-width: 75rem) {
+  .meaning__content {
+    margin-top: 172px;
+  }
 }
 
 .meaning__title {
   margin-bottom: 32px;
   color: #253347;
+  letter-spacing: -2px;
   font-size: 32px;
+}
+@media (min-width: 75rem) {
+  .meaning__title {
+    font-size: 48px;
+    margin-bottom: 35px;
+  }
 }
 
 .meaning__text {
@@ -323,6 +353,12 @@ body {
 @media (min-width: 43.75rem) {
   .hero__advices {
     padding: 60px 43px 60px 39px;
+    margin-bottom: 96px;
+  }
+}
+@media (min-width: 75rem) {
+  .hero__advices {
+    display: flex;
   }
 }
 
@@ -331,6 +367,12 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+}
+@media (min-width: 75rem) {
+  .advices__container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -362,13 +404,42 @@ body {
 .hero__limitations {
   margin: 0 29px 96px 19px;
 }
+@media (min-width: 43.75rem) {
+  .hero__limitations {
+    margin: 0 43px 96px 39px;
+  }
+}
 
 .limitations__title {
   margin-bottom: 32px;
 }
+@media (min-width: 43.75rem) {
+  .limitations__title {
+    text-align: center;
+  }
+}
 
 .hero__limitations > p {
   margin-bottom: 56px;
+}
+@media (min-width: 43.75rem) {
+  .hero__limitations > p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .limitations__cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 15px;
+  }
+}
+
+.limitations__card.race {
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 365px;
 }
 
 .limitations__card {
@@ -380,6 +451,11 @@ body {
 
 .limitations__card:not(:last-of-type) {
   margin-bottom: 16px;
+}
+@media (min-width: 43.75rem) {
+  .limitations__card:not(:last-of-type) {
+    margin-bottom: initial;
+  }
 }
 
 .card__header {

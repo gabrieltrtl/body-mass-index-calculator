@@ -277,6 +277,10 @@ border-width: 0;
     flex-direction: row;
     margin-bottom: 96px;
   }
+  @include device(desktop) {
+    justify-content: center;
+    align-items: initial;
+  }
 }
 
 .meaning__img {
@@ -287,22 +291,39 @@ border-width: 0;
     margin-right: 75px;
     margin-bottom: initial;
   }
+  @include device(desktop) {
+    margin-left: initial;
+    max-width: 564px;
+    margin-right: 131px;
+  }
 }
 
 .meaning__content {
   max-width: 328px;
+  @include device(desktop) {
+    max-width: 465px;
+  }
+  @include device(desktop) {
+    margin-top: 172px;
+  }
 }
 
 .meaning__title {
   margin-bottom: 32px;
   color: $primary-2;
+  letter-spacing: -2px;
   font-size: map-get($fonts, "$medium3");
+  @include device(desktop) {
+    font-size: map-get($fonts, "$large1");
+    margin-bottom: 35px;
+  } 
 }
 
 .meaning__text {
   line-height: 1.5;
   color: $primary-3;
 }
+
 
 .hero__advices {
   background: linear-gradient(300deg,rgba(214, 230, 254, .5), rgba(214, 252, 254, 0) 100%);
@@ -311,6 +332,10 @@ border-width: 0;
   margin-bottom: 72px;
   @include device(tablet) {
     padding: 60px 43px 60px 39px;
+    margin-bottom: 96px;
+  }
+  @include device(desktop) {
+    display: flex;
   }
 }
 
@@ -319,6 +344,10 @@ border-width: 0;
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+  @include device(desktop) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -345,17 +374,39 @@ border-width: 0;
   margin-bottom: 40px;
 }
 
-
 .hero__limitations {
   margin: 0 29px 96px 19px;
+  @include device(tablet) {
+    margin: 0 43px 96px 39px;
+  }
 }
 
 .limitations__title {
   margin-bottom: 32px;
+  @include device(tablet) {
+    text-align: center;
+  }
 }
 
 .hero__limitations > p {
-  margin-bottom: 56px;
+  margin-bottom: 56px; 
+  @include device(tablet) {
+    text-align: center;
+  }
+}
+
+.limitations__cards-wrapper {
+  @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 15px;
+  }
+}
+
+.limitations__card.race {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 365px;
 }
 
 .limitations__card {
@@ -367,6 +418,9 @@ border-width: 0;
 
 .limitations__card:not(:last-of-type) {
   margin-bottom: 16px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
 }
 
 .card__header {
@@ -380,7 +434,6 @@ border-width: 0;
 .limitations__subtitle {
  color: $primary-2;
  font-size: map-get($fonts, "$medium1");
-
 }
 
 .limitations__text {
