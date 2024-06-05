@@ -15,76 +15,78 @@
   </header>
 
   <main class="hero__container">
-    <section class="hero__intro">
-      <h1 class="intro__title">Body Mass Index Calculator</h1>
-      <p class="intro__text">
-        Better understand your weight in relation to your height using our
-        body mass index (BM) calculator. While BMI is not the sole determinant
-        of a healthy weight, it offers a valuable starting point to evaluate
-        your overall health and well-being.
-      </p>
-    </section>
 
-    <section class="hero__form-wrapper">
-
-      <form class="hero__form" action="">
-        <fieldset>
-          <h2 class="form__title">Enter your details below</h2>
-          <div class="form__radios">
-            <label class="radio__label" for="metric"><input name="measurement" value="metric" id="metric" type="radio" checked>Metric</label>
-            <label class="radio__label" for="imperial"><input name="measurement" value="imperial" id="imperial" type="radio">Imperial</label>
-          </div>
-          <div class="form__text-inputs metric active">
-            <div class="text-inputs__height">
-              <label class="measurement__label" for="height-cm">Height</label>
-              <input id="height-cm" type="text" placeholder="0" required>
-              <span class="placeholder-text cm">cm</span>
+    <div class="hero__intro-wrapper">
+      <section class="hero__intro">
+        <h1 class="intro__title">Body Mass Index Calculator</h1>
+        <p class="intro__text">
+          Better understand your weight in relation to your height using our
+          body mass index (BM) calculator. While BMI is not the sole determinant
+          of a healthy weight, it offers a valuable starting point to evaluate
+          your overall health and well-being.
+        </p>
+      </section>
+      <section class="hero__form-wrapper">
+        <form class="hero__form" action="">
+          <fieldset>
+            <h2 class="form__title">Enter your details below</h2>
+            <div class="form__radios">
+              <label class="radio__label" for="metric"><input name="measurement" value="metric" id="metric" type="radio" checked>Metric</label>
+              <label class="radio__label" for="imperial"><input name="measurement" value="imperial" id="imperial" type="radio">Imperial</label>
             </div>
-            <div class="text-inputs__weight">
-              <label class="measurement__label" for="weight-kg">Weight</label>
-              <input id="weight-kg" type="text" placeholder="0" required>
-              <span class="placeholder-text kg">kg</span>
+            <div class="form__text-inputs metric active">
+              <div class="text-inputs__height">
+                <label class="measurement__label" for="height-cm">Height</label>
+                <input id="height-cm" type="text" placeholder="0" required>
+                <span class="placeholder-text cm">cm</span>
+              </div>
+              <div class="text-inputs__weight">
+                <label class="measurement__label" for="weight-kg">Weight</label>
+                <input id="weight-kg" type="text" placeholder="0" required>
+                <span class="placeholder-text kg">kg</span>
+              </div>
             </div>
+            <div class="form__text-inputs imperial">
+              <!-- <label class="measurement__label sr-only" for="height-ft">Height</label> -->
+              <fieldset class="text-inputs-wrapper">
+                <legend class="imperial__legend">Height</legend>
+                <div class="text-inputs__height ft">
+                  <input aria-label="height" id="height-ft" type="text" placeholder="0" required>
+                  <span class="placeholder-text ft">ft</span>
+                </div>
+                <div class="text-inputs__height in">
+                  <input aria-label="height" id="height-in" type="text" placeholder="0" required>
+                  <span class="placeholder-text in">in</span>
+                </div>
+              </fieldset>
+              <!-- <label class="measurement__label sr-only" for="weight">Weight</label> -->
+              <fieldset class="text-inputs-wrapper">
+                <legend class="imperial__legend">Weight</legend>
+                <div class="text-inputs__weight st">
+                  <input aria-label="weight" id="weight-st" type="text" placeholder="0" required>
+                  <span class="placeholder-text st">st</span>
+                </div>
+                <div class="text-inputs__weight lbs">
+                  <input aria-label="weight" id="weight-lbs" type="text" placeholder="0" required>
+                  <span class="placeholder-text lbs">lbs</span>
+                </div>
+              </fieldset class>
+            </div>
+          </fieldset>
+        </form>
+        <!-- add score -->
+        <div class="form__result">
+          <div class="result__title-wrapper">
+            <h3 class="result__title">Your BMI is...</h3>
+            <span class="result__number">35.5</span>
           </div>
-          <div class="form__text-inputs imperial">
-            <!-- <label class="measurement__label sr-only" for="height-ft">Height</label> -->
-            <fieldset class="text-inputs-wrapper">
-              <legend class="imperial__legend">Height</legend>
-              <div class="text-inputs__height ft">
-                <input aria-label="height" id="height-ft" type="text" placeholder="0" required>
-                <span class="placeholder-text ft">ft</span>
-              </div>
-              <div class="text-inputs__height in">
-                <input aria-label="height" id="height-in" type="text" placeholder="0" required>
-                <span class="placeholder-text in">in</span>
-              </div>
-            </fieldset>
-            <!-- <label class="measurement__label sr-only" for="weight">Weight</label> -->
-            <fieldset class="text-inputs-wrapper">
-              <legend class="imperial__legend">Weight</legend>
-              <div class="text-inputs__weight st">
-                <input aria-label="weight" id="weight-st" type="text" placeholder="0" required>
-                <span class="placeholder-text st">st</span>
-              </div>
-              <div class="text-inputs__weight lbs">
-                <input aria-label="weight" id="weight-lbs" type="text" placeholder="0" required>
-                <span class="placeholder-text lbs">lbs</span>
-              </div>
-            </fieldset class>
-          </div>
-        </fieldset>
-      </form>
-      <!-- add score -->
-      <div class="form__result">
-        <div class="result__title-wrapper">
-          <h3 class="result__title">Your BMI is...</h3>
-          <span class="result__number">35.5</span>
+            <p class="result__text">
+              Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.
+            </p>
         </div>
-          <p class="result__text">
-            Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.
-          </p>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <section class="hero__meaning">
       <img class="meaning__img" src="./assets/images/image-man-eating.webp" alt="">
       <div class="meaning__content">

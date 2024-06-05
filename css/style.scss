@@ -58,6 +58,20 @@ border-width: 0;
   .header__logo {
     margin: 0 auto;
     max-width: 40px;
+    @include device(desktop) {
+      max-width: 64px;
+      margin: initial;
+    }
+  }
+  @include device(desktop) {
+    padding: 75px 0px 28px 140px;
+  }
+}
+
+.hero__intro-wrapper {
+  @include device(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -75,6 +89,15 @@ border-width: 0;
     background: linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
     border-radius: 0 0 35px 35px;
     z-index: -1;
+    @include device(desktop) {
+      height: 46rem;
+      width:68%;
+    }
+  }
+  @include device(desktop) {
+    max-width: 564px;
+    text-align: initial;
+    margin: 99px 0px 0 140px;
   }
 }
 
@@ -82,6 +105,9 @@ border-width: 0;
   font-size: map-get($fonts, "$large1" );
   color: $primary-2;
   margin-bottom: 24px;
+  @include device(desktop) {
+   font-size: map-get($fonts, "$large2" );
+  }
 }
 
 .intro__text {
@@ -99,6 +125,9 @@ border-width: 0;
   @include device(tablet) {
     max-width: 686px;
     padding: 32px;
+  }
+  @include device(desktop) {
+    max-width: 564px;
   }
 }
 .hero__form {
@@ -186,14 +215,15 @@ border-width: 0;
 
 .active {
   display: block;
+  @include device(tablet) { 
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .text-inputs__height {
   display: inline-block;
   position: relative;
-  @include device(tablet) {
-    margin-right: 19px;
-  }
   .placeholder-text {
     color: #345FF6;
     font-size: map-get($fonts, "$medium2");
@@ -241,9 +271,7 @@ border-width: 0;
 .text-inputs-wrapper {
   display: flex;
   justify-content: space-between;
-  @include device(tablet) {
-    justify-content: initial;
-  }
+  margin-bottom: 16px;
 }
 
 .form__result {
@@ -253,9 +281,10 @@ border-width: 0;
   border-radius: 16px;
   @include device(tablet) {
     border-radius: 16px 999px 999px 16px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 192px
+    gap: 25px
   }
 }
 
