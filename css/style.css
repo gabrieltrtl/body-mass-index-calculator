@@ -33,18 +33,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 .header {
   padding: 32px 0 24px;
 }
@@ -111,6 +99,11 @@ body {
     font-size: 64px;
   }
 }
+@media (min-width: 75rem) {
+  .intro__title {
+    margin-bottom: 32px;
+  }
+}
 
 .intro__text {
   color: #5E6E85;
@@ -139,6 +132,11 @@ body {
 
 .hero__form {
   margin-bottom: 24px;
+}
+@media (min-width: 75rem) {
+  .hero__form {
+    margin-bottom: 32px;
+  }
 }
 .hero__form .radio__label {
   color: #253347;
@@ -190,6 +188,13 @@ body {
     width: 299px;
   }
 }
+@media (min-width: 75rem) {
+  .hero__form input[type=text] {
+    width: initial;
+    max-width: 238px;
+    padding: 23.5px 24px;
+  }
+}
 .hero__form input[type=text]::placeholder {
   font-size: 20px;
   color: #5E6E85;
@@ -206,10 +211,20 @@ body {
   margin-bottom: 24px;
   letter-spacing: -1.2px;
 }
+@media (min-width: 75rem) {
+  .form__title {
+    margin-bottom: 32px;
+  }
+}
 
 .form__radios {
   display: flex;
   margin-bottom: 24px;
+}
+@media (min-width: 75rem) {
+  .form__radios {
+    margin-bottom: 32px;
+  }
 }
 .form__radios label[for=metric] {
   margin-right: 53px;
@@ -217,6 +232,11 @@ body {
 @media (min-width: 43.75rem) {
   .form__radios label[for=metric] {
     margin-right: 224px;
+  }
+}
+@media (min-width: 75rem) {
+  .form__radios label[for=metric] {
+    margin-right: 163px;
   }
 }
 
@@ -282,10 +302,18 @@ body {
     max-width: initial;
   }
 }
+@media (min-width: 75rem) {
+  .imperial input[type=text] {
+    max-width: 238px;
+  }
+}
 
 .text-inputs-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.text-inputs-wrapper:first-child {
   margin-bottom: 16px;
 }
 
@@ -308,8 +336,14 @@ body {
 .result__number {
   font-size: 48px;
 }
+@media (min-width: 75rem) {
+  .result__number {
+    font-size: 64px;
+  }
+}
 
 .result__text {
+  line-height: 1.5;
   font-size: 14px;
 }
 

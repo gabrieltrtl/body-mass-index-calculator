@@ -41,18 +41,8 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.sr-only {
-position: absolute;
-width: 1px;
-height: 1px;
-padding: 0;
-margin: -1px;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-white-space: nowrap;
-border-width: 0;
-}
 
+// Header --------------------------------------------------
 .header {
   padding: 32px 0 24px;
   .header__logo {
@@ -67,6 +57,8 @@ border-width: 0;
     padding: 75px 0px 28px 140px;
   }
 }
+
+// Intro --------------------------------------------------
 
 .hero__intro-wrapper {
   @include device(desktop) {
@@ -108,12 +100,17 @@ border-width: 0;
   @include device(desktop) {
    font-size: map-get($fonts, "$large2" );
   }
+  @include device(desktop) {
+    margin-bottom: 32px;
+  }
 }
 
 .intro__text {
   color: $primary-3;
   line-height: 1.5;
 }
+
+// Form --------------------------------------------------
 
 .hero__form-wrapper {
   max-width: 328px;
@@ -132,6 +129,9 @@ border-width: 0;
 }
 .hero__form {
   margin-bottom: 24px;
+  @include device(desktop) {
+    margin-bottom: 32px;
+  }
   .radio__label {
     color: $primary-2;
     font-weight: 600;
@@ -179,6 +179,11 @@ border-width: 0;
     @include device(tablet) {
       width: 299px;
     }
+    @include device(desktop) {
+      width: initial;
+      max-width: 238px;
+      padding: 23.5px 24px;
+    }
     &::placeholder {
       font-size: map-get($fonts, "$medium1");
       color: $primary-3;
@@ -196,15 +201,24 @@ border-width: 0;
   font-weight: 600;
   margin-bottom: 24px;
   letter-spacing: -1.2px;
+  @include device(desktop) {
+    margin-bottom: 32px;
+  }
 }
 
 .form__radios {
   display: flex; 
   margin-bottom: 24px;
+  @include device(desktop) {
+    margin-bottom: 32px;
+  }
   label[for="metric"] {
     margin-right: 53px;
     @include device(tablet) {
       margin-right: 224px;
+    }
+    @include device(desktop) {
+      margin-right: 163px;
     }
   }
 }
@@ -266,11 +280,17 @@ border-width: 0;
   @include device(tablet) {
     max-width: initial;
   }
+  @include device(desktop) {
+    max-width: 238px;
+  }
 }
 
 .text-inputs-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.text-inputs-wrapper:first-child {
   margin-bottom: 16px;
 }
 
@@ -290,11 +310,17 @@ border-width: 0;
 
 .result__number {
   font-size: map-get($fonts, "$large1");
+  @include device(desktop) {
+  font-size: map-get($fonts, "$large2");
+  }
 }
 
 .result__text {
+  line-height: 1.5;
   font-size: map-get($fonts, "$small1");
 }
+
+// Meaning[Section-1] --------------------------------------------------
 
 .hero__meaning {
   display: flex;
@@ -353,6 +379,7 @@ border-width: 0;
   color: $primary-3;
 }
 
+// Advices[Section-2] --------------------------------------------------
 
 .hero__advices {
   background: linear-gradient(300deg,rgba(214, 230, 254, .5), rgba(214, 252, 254, 0) 100%);
@@ -409,6 +436,8 @@ border-width: 0;
 .advices__text:not(:last-child) {
   margin-bottom: 40px;
 }
+
+// Limitations[Section-3] --------------------------------------------------
 
 .hero__limitations {
   margin: 0 29px 96px 19px;
