@@ -474,20 +474,22 @@ body {
 
 @media (min-width: 75rem) {
   .limitations__card.gender {
-    grid-column: 8/13;
+    grid-column: 8/12;
+    justify-self: end;
   }
 }
 
 @media (min-width: 75rem) {
   .limitations__card.age {
     grid-column: 5/9;
-    align-self: start;
+    justify-self: end;
   }
 }
 
 @media (min-width: 75rem) {
   .limitations__card.muscle {
     grid-column: 9/13;
+    justify-self: end;
   }
 }
 
