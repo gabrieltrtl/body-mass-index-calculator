@@ -64,6 +64,8 @@ body {
   @include device(desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1160px;
   }
 }
 
@@ -89,7 +91,7 @@ body {
   @include device(desktop) {
     max-width: 564px;
     text-align: initial;
-    margin: 99px 0px 0 140px;
+    margin-top: 99px;
   }
 }
 
@@ -224,7 +226,7 @@ body {
 }
 
 .form__text-inputs.imperial {
-  display: block;
+  display: none;
 }
 
 .active {
@@ -331,6 +333,7 @@ body {
   @include device(tablet) {
     flex-direction: row;
     margin-bottom: 96px;
+    justify-content: center;
   }
   @include device(desktop) {
     justify-content: center;
@@ -431,6 +434,11 @@ body {
   color: $primary-2;
   font-size: map-get($fonts, "$medium2");
   margin-bottom: 24px;
+}
+
+.advices__text {
+  color: $primary-3;
+  line-height: 1.5;
 }
 
 .advices__text:not(:last-child) {

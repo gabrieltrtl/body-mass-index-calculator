@@ -56,6 +56,8 @@ body {
   .hero__intro-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1160px;
   }
 }
 
@@ -85,7 +87,7 @@ body {
   .hero__intro {
     max-width: 564px;
     text-align: initial;
-    margin: 99px 0px 0 140px;
+    margin-top: 99px;
   }
 }
 
@@ -241,7 +243,7 @@ body {
 }
 
 .form__text-inputs.imperial {
-  display: block;
+  display: none;
 }
 
 .active {
@@ -358,6 +360,7 @@ body {
   .hero__meaning {
     flex-direction: row;
     margin-bottom: 96px;
+    justify-content: center;
   }
 }
 @media (min-width: 75rem) {
@@ -477,6 +480,11 @@ body {
   color: #253347;
   font-size: 24px;
   margin-bottom: 24px;
+}
+
+.advices__text {
+  color: #5E6E85;
+  line-height: 1.5;
 }
 
 .advices__text:not(:last-child) {
