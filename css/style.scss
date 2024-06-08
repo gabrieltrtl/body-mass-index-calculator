@@ -240,29 +240,27 @@ body {
 .text-inputs__height {
   display: inline-block;
   position: relative;
-  .placeholder-text {
-    color: #345FF6;
-    font-size: map-get($fonts, "$medium2");
-    font-weight: 600;
-    position: absolute;
-    top: calc(50% + 10px);
-    right: 24px;
-    transform: translateY(-50%);
-  }
 }
 
 .text-inputs__weight {
   display: inline-block;
   position: relative;
-  .placeholder-text {
-    color: #345FF6;
-    font-size: map-get($fonts, "$medium2");
-    font-weight: 600;
-    position: absolute;
-    top: calc(50% + 12px);
-    right: 24px;
-    transform: translateY(-50%);
-  }
+}
+
+.placeholder-text {
+  color: #345FF6;
+  font-size: map-get($fonts, "$medium2");
+  font-weight: 600;
+  position: absolute;
+  top: calc(50% + 14px);
+  right: 24px;
+  transform: translateY(-50%);
+}
+
+.imperial .placeholder-text {
+  
+  top: 50%;
+   
 }
 
 .imperial .measurement__label {

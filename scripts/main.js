@@ -29,7 +29,6 @@ function validateInput(value, min, max) {
   return !isNaN(value) && value >= min && value <= max;
 }
 
-
 textInputs.forEach(input => {
   input.addEventListener('input', function(){
     if(input.id === "height-cm") {
@@ -55,9 +54,16 @@ textInputs.forEach(input => {
       console.log(bmiResult);
       resultNumber.textContent = bmiResult;
       
-      resultText.textContent = `Você  está gordo, seu bmi deve ser entre ${minWeight} e ${maxWeight}`;
+      if(bmiResult < 18.5) {
+        resultText.textContent = `Your BMI suggests you're underweight. Your ideal weight is between ${minWeight}kgs - ${maxWeight}kgs`
+      } else if (bmiResult >= 18.5 && bmiResult < 25) {
+        resultText.textContent = `Your BMI suggests you're a healthy weight. Your ideal weight is between ${minWeight}kgs - ${maxWeight}kgs`
+      } else if (bmiResult >= 25 && bmiResult < 30) {
+        resultText.textContent = `Your BMI suggests you're a overweight. Your ideal weight is between ${minWeight}kgs - ${maxWeight}kgs`
+      } else {
+        resultText.textContent = `Your BMI suggests you're obese. Your ideal weight is between ${minWeight}kgs - ${maxWeight}kgs`
+      }
     }
   })
 })
-
 
