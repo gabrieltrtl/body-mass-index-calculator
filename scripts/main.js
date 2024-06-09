@@ -18,6 +18,16 @@ radioInputs.forEach(radio => {
 
 /* This function shows or hides metric or imperial type containers depending on the selected input radio. */
 function showOrHide() {
+
+  textInputs.forEach(input => {
+    input.value = '';
+  });
+
+  resultNumber.textContent = '';
+  resultText.textContent = '';
+  heightValueCm = null;
+  heightValueFt = null;
+
   if (this.id === "metric" && this.checked) {
     metricContainer.style.display = "flex";
     metricContainer.style.flexWrap = "wrap";
@@ -44,7 +54,7 @@ textInputs.forEach(input => {
       }   
     } else if (input.id === "weight-kg") {
         const value = parseFloat(input.value);
-      if(validateInput(value, 10, 400)) {
+      if(validateInput(value, 0, 400)) {
           weightValueKg = value;
       } else {
           weightValueKg = null;
