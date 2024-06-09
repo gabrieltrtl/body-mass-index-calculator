@@ -37,12 +37,12 @@
             <div class="form__text-inputs metric active">
               <div class="text-inputs__height">
                 <label class="measurement__label" for="height-cm">Height</label>
-                <input id="height-cm" type="text"  placeholder="0" required>
+                <input id="height-cm" type="text"  placeholder="0" maxlength="3" required>
                 <span class="placeholder-text cm">cm</span>
               </div>
               <div class="text-inputs__weight">
                 <label class="measurement__label" for="weight-kg">Weight</label>
-                <input id="weight-kg" type="text" placeholder="0" required>
+                <input id="weight-kg" type="text" placeholder="0" maxlength="3" required>
                 <span class="placeholder-text kg">kg</span>
               </div>
             </div>
@@ -51,11 +51,11 @@
               <fieldset class="text-inputs-wrapper">
                 <legend class="imperial__legend">Height</legend>
                 <div class="text-inputs__height ft">
-                  <input aria-label="height" id="height-ft" type="text" placeholder="0" required>
+                  <input aria-label="height" id="height-ft" type="text" placeholder="0" maxlength="2" required>
                   <span class="placeholder-text ft">ft</span>
                 </div>
                 <div class="text-inputs__height in">
-                  <input aria-label="height" id="height-in" type="text" placeholder="0" required>
+                  <input aria-label="height" id="height-in" type="text" placeholder="0" maxlength="2" required>
                   <span class="placeholder-text in">in</span>
                 </div>
               </fieldset>
@@ -63,11 +63,11 @@
               <fieldset class="text-inputs-wrapper">
                 <legend class="imperial__legend">Weight</legend>
                 <div class="text-inputs__weight st">
-                  <input aria-label="weight" id="weight-st" type="text" placeholder="0" required>
+                  <input aria-label="weight" id="weight-st" type="text" placeholder="0" maxlength="2" required>
                   <span class="placeholder-text st">st</span>
                 </div>
                 <div class="text-inputs__weight lbs">
-                  <input aria-label="weight" id="weight-lbs" type="text" placeholder="0" required>
+                  <input aria-label="weight" id="weight-lbs" type="text" placeholder="0" maxlength="2" required>
                   <span class="placeholder-text lbs">lbs</span>
                 </div>
               </fieldset class>
